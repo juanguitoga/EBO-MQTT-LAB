@@ -1,0 +1,21 @@
+name: MQTT Publish
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Publish MQTT
+        env:
+          MQTT_PASSWORD: ${{ secrets.MQTT_PASSWORD }}
+        run: |
+          python send_mqtt.py
