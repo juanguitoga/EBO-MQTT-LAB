@@ -17,6 +17,6 @@ client.connect(BROKER, PORT)
 
 client.publish("weather/test", "25")
 
-print("Mensaje enviado: 25")
+print("Mensaje enviado: 50")
 
 client.disconnect()
