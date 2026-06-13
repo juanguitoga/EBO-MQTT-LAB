@@ -15,7 +15,7 @@ client.tls_set(cert_reqs=ssl.CERT_REQUIRED)
 
 client.connect(BROKER, PORT)
 
-client.publish("weather/test", "25")
+client.publish("weather/test", "50")
 
 print("Mensaje enviado: 50")
 
